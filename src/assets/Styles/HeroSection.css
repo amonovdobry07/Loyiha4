@@ -1,0 +1,43 @@
+.HeroSection {
+    top: 15vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.HereSection-Back {
+    width: 100%;
+    height: 100%;
+}
+
+.HereSection-Back video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Hero-overlar {
+    position: absolute;
+    top: 15vh;
+    width: 100%;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.199);
+    z-index: 3;
+}
+
+
+@media screen and (max-width: 992px) {
+    .HeroSection {
+        top: 12vh;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .Hero-overlar {
+        position: absolute;
+        top: 12vh;
+        width: 100%;
+        height: 85vh;
+        background-color: rgba(0, 0, 0, 0.199);
+        z-index: 3;
+    }
+}

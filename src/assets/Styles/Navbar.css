@@ -7,8 +7,9 @@ body {
 .Nav {
     width: 100%;
     padding: 10px 0 0px 0;
-    background-color: rgba(223, 223, 223, 0.575);
+    background-color: rgb(223, 223, 223);
     position: fixed;
+    z-index: 5;
 }
 
 .nav-container {
@@ -275,7 +276,7 @@ body {
         width: 100%;
     }
 
-    .mobile-nav-links ul li:hover {
+    .mobile-nav-linksnpm ul li:hover {
         transform: translateY(-3px);
     }
 
