@@ -102,13 +102,13 @@ const ProductSection = () => {
 
     return (
         <div className="ProductSection">
-            <div className="ProductSection-container hh1">
+            <div className="ProductSection-container hh1" data-aos="zoom-in" data-aos-duration="1000">
                 <h1>Bizning Maxsulotlar</h1>
             </div>
 
             <div className="ProductSection-container">
                 {visibleProducts.map((item) => (
-                    <div className="product-card" key={item.id}>
+                    <div className="product-card" key={item.id} data-aos="zoom-in" data-aos-duration="1500">
                         <div className="product-image">
                             <img src={item.img} alt={item.title} />
                         </div>

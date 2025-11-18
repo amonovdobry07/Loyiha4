@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import "../assets/Styles/Navbar.css"
-import { LuPhoneCall } from "react-icons/lu";
+
 import { FaBarsStaggered } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
+
 
 const Navbar = () => {
     const [drop, setDrop] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false);
     const [mobileDrop, setMobileDrop] = useState(false); // NEW
+
+
+    const { t, i18n } = useTranslation()
 
     return (
         <div className='Nav'>
@@ -19,15 +24,16 @@ const Navbar = () => {
                 {/* Desktop links */}
                 <div className="nav-links">
                     <ul>
-                        <a href=""><li>Home</li></a>
-                        <a href=""><li>Products</li></a>
-                        <a href=""><li>About</li></a>
-                        <a href=""><li>Contact</li></a>
+                        <a href="" data-aos="fade-down" data-aos-duration="1000"><li>{t(`BoshSahifa`)}</li></a>
+                        <a href="" data-aos="fade-down" data-aos-duration="1200"><li>{t(`Tavarlar`)}</li></a>
+                        <a href="" data-aos="fade-down" data-aos-duration="1400"><li>{t(`BizHaqimizda`)}</li></a>
+                        <a href="" data-aos="fade-down" data-aos-duration="1600"><li>{t(`Boglanish`)}</li></a>
 
                         {/* Desktop Dropdown */}
                         <li className='Market'
                             onMouseEnter={() => setDrop(true)}
                             onMouseLeave={() => setDrop(false)}
+                            data-aos="fade-down" data-aos-duration="1800"
                         >
                             Market Place &nbsp; ▼
                             {drop && (
@@ -41,8 +47,13 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <div className="lang_provider">
-                        <select>
+                    <div className="lang_provider" data-aos="fade-down" data-aos-duration="2000">
+                        <select
+                            onChange={(e) => {
+                                i18n.changeLanguage(e.target.value)
+                            }}
+                            defaultValue="uz"
+                        >
                             <option value="uz">O'zbek</option>
                             <option value="en">English</option>
                             <option value="ru">Русскый</option>

@@ -12,7 +12,7 @@ const AboutSection = () => {
             <div className="about-container">
 
                 {/* LEFT SECTION */}
-                <div className="about-left">
+                <div className="about-left" data-aos="fade-down-right" data-aos-duration="1500">
                     <div className="story-title">
                         <span className="red-line"></span> Biz Haqimizda
                     </div>
@@ -78,7 +78,7 @@ const AboutSection = () => {
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="about-right">
+                <div className="about-right" data-aos="fade-down-left" data-aos-duration="1500" >
                     <img
                         src="https://images.unsplash.com/photo-1560264418-c4445382edbc"
                         alt="Team Work"

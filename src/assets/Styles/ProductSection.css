@@ -88,6 +88,15 @@
   color: #111;
 }
 
+.copyright {
+  width: 100%;
+  text-align: center;
+  background-color: #F9F9F9;
+  padding: 15px 0;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 992px) {
@@ -103,9 +112,10 @@
 }
 
 @media screen and (max-width: 600px) {
-    .ProductSection-container{
-        justify-content: center;
-    }
+  .ProductSection-container {
+    justify-content: center;
+  }
+
   .product-card {
     width: 95%;
   }
