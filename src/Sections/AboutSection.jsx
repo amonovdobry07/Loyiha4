@@ -4,9 +4,13 @@ import small1 from "../assets/images/Без названия.jpg"
 import small2 from "../assets/images/Без названия (1).jpg"
 import img3 from "../assets/images/Без названия (2).jpg"
 import bigPhoto from "../assets/images/Без названия (3).jpg";
+import { useTranslation } from "react-i18next";
+
+
 
 
 const AboutSection = () => {
+    const { t, i18n } = useTranslation()
     return (
         <section className="about-wrapper">
             <div className="about-container">
@@ -14,12 +18,12 @@ const AboutSection = () => {
                 {/* LEFT SECTION */}
                 <div className="about-left" data-aos="fade-down-right" data-aos-duration="1500">
                     <div className="story-title">
-                        <span className="red-line"></span> Biz Haqimizda
+                        <span className="red-line"></span> {t(`BizHaqimizda2`)}
                     </div>
 
                     <h1 className="main-title">
-                        Faoliyat Turi dasturchilik Kadr Yetishtirish <br />
-                        <span>Dasturchi Tayyorlash</span>
+                        {t(`FaoliyatTuri`)} <br />
+                        <span>{t(`Dasturchi`)}</span>
                     </h1>
 
                     {/* Small Preview Images */}
@@ -29,8 +33,8 @@ const AboutSection = () => {
                                 src={bigPhoto}
                                 alt=""
                             />
-                            <div className="tag left">Tech Blog</div>
-                            <div className="tag right">Trends</div>
+                            <div className="tag left">{t(`Tech`)}</div>
+                            <div className="tag right">{t(`Trends`)}</div>
                         </div>
 
                         <div className="preview-card">
@@ -38,13 +42,13 @@ const AboutSection = () => {
                                 src={small2}
                                 alt=""
                             />
-                            <div className="tag left">Tech Blog</div>
-                            <div className="tag right">Trends</div>
+                            <div className="tag left">{t(`Tech`)}</div>
+                            <div className="tag right">{t(`Trends`)}</div>
                         </div>
                     </div>
 
                     <p className="about-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ratione similique quas molestias. Officiis incidunt aspernatur laudantium aperiam maxime, officia quo facere quibusdam ad id a voluptatem itaque similique sapiente.
+                        {t(`About`)}
                     </p>
 
                     {/* STATS */}
@@ -52,24 +56,24 @@ const AboutSection = () => {
                         <div className="qator">
                             <div className="stat-item">
                                 <h2>10k+</h2>
-                                <p>Completed Projects</p>
+                                <p>{t(`Loyihalar`)}</p>
                             </div>
 
                             <div className="stat-item">
                                 <h2>15k</h2>
-                                <p>Satisfied Customers</p>
+                                <p>{t(`Mijozlar`)}</p>
                             </div>
                         </div>
 
                         <div className="qator">
                             <div className="stat-item">
                                 <h2>10k+</h2>
-                                <p>Years Of Mastery</p>
+                                <p>{t(`Tajriba`)}</p>
                             </div>
 
                             <div className="stat-item">
                                 <h2>45+</h2>
-                                <p>Worldwide Honors</p>
+                                <p>{t(`MukammalLoyihalar`)}</p>
                             </div>
                         </div>
                     </div>

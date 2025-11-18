@@ -5,6 +5,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { GrYoutube } from "react-icons/gr";
 import { SiWhatsapp } from "react-icons/si";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
   const [value, setValue] = useState("+998 (_)-___-__-__");
@@ -41,18 +42,18 @@ const ContactSection = () => {
   const handleChange = (e) => {
     setValue(formatPhone(e.target.value));
   };
+
+  const { t, i18n } = useTranslation()
   return (
     <>
       <div className="ContactSection">
         <div className="ContactSection-container" data-aos="zoom-in-down" data-aos-duration="2000">
           {/* Left */}
           <div className="ContactSection-left">
-            <h3>Bog'lanish Uchun</h3>
+            <h3>{t(`BoglanishUchun`)}</h3>
             <h1>Logo</h1>
             <p>
-              Biz bilan bog‘lanish uchun quyidagi shakldan foydalaning yoki
-              to‘g‘ridan-to‘g‘ri quyidagi aloqa manzillarimiz orqali murojaat
-              qiling.
+              {t(`Bizbilan`)}
             </p>
             <span
               style={{
@@ -83,7 +84,7 @@ const ContactSection = () => {
 
             <form action="">
               <span className="Contact-inputs">
-                <input type="text" placeholder="Name" />
+                <input type="text" placeholder={t(`ism`)} />
                 <input
                   className="phone-input"
                   type="text"
@@ -93,7 +94,7 @@ const ContactSection = () => {
                   placeholder="+998 (__) ___-__-__"
                 />
               </span>
-              <button>Yuborish</button>
+              <button>{t(`Yuborish`)}</button>
             </form>
           </div>
           {/* Right */}

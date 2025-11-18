@@ -10,83 +10,84 @@ import img6 from "../assets/images/image6.png"
 import img7 from "../assets/images/image7.png"
 import img8 from "../assets/images/image8.png"
 import img9 from "../assets/images/image9.png"
+import { useTranslation } from "react-i18next"
 
 const ProductSection = () => {
 
     const [visibleCount, setvisibleCount] = useState(3)
-
+    const { t, i18n } = useTranslation()
     const products = [
         {
             id: 1,
             img: img1,
-            title: "Alisher Navoiy",
-            size: "70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "30 000 000 so'm",
+            title: t(`AlisherNavoiy`),
+            size: "70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "30 000 000" + t(`som`),
         },
         {
             id: 2,
             img: img2,
-            title: "Abdulla Qodiriy | Jadidlar tarixi",
-            size: "85x45 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "20 000 000 so'm",
+            title: t(`AbdullaQodiriy`),
+            size: "85x45" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "20 000 000" + t(`som`),
         },
         {
             id: 3,
             img: img3,
-            title: "Amir Temur relefti",
-            size: "45x70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "10 000 000 so'm",
+            title: t(`AmirTemur`),
+            size: "45x70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "10 000 000" + t(`som`),
         },
         {
             id: 4,
             img: img4,
-            title: "Alisher Navoiy",
-            size: "70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "30 000 000 so'm",
+            title: t(`AlisherNavoiy`),
+            size: "70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "30 000 000" + t(`som`),
         },
         {
             id: 5,
             img: img5,
-            title: "Abdulla Qodiriy | Jadidlar tarixi",
-            size: "85x45 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "20 000 000 so'm",
+            title: t(`AbdullaQodiriy`),
+            size: "85x45" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "20 000 000" + t(`som`),
         },
         {
             id: 6,
             img: img6,
-            title: "Amir Temur relefti",
-            size: "45x70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "10 000 000 so'm",
+            title: t(`AmirTemur`),
+            size: "45x70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "10 000 000" + t(`som`),
         },
         {
             id: 7,
             img: img7,
-            title: "Alisher Navoiy",
-            size: "70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "30 000 000 so'm",
+            title: t(`AlisherNavoiy`),
+            size: "70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "30 000 000" + t(`som`),
         },
         {
             id: 8,
             img: img8,
-            title: "Abdulla Qodiriy | Jadidlar tarixi",
-            size: "85x45 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "20 000 000 so'm",
+            title: t(`AbdullaQodiriy`),
+            size: "85x45" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "20 000 000" + t(`som`),
         },
         {
             id: 9,
             img: img9,
-            title: "Amir Temur relefti",
-            size: "45x70 sm",
-            desc: "Ganj mahsulotidan tayyorlangan",
-            price: "10 000 000 so'm",
+            title: t(`AmirTemur`),
+            size: "45x70" + t(`sm`),
+            desc: t(`Ganjmahsulotidantayyorlangan`),
+            price: "10 000 000" + t(`som`),
         },
     ]
 
@@ -126,12 +127,12 @@ const ProductSection = () => {
             <div className="ProductSection-container hh1 buttons-row">
                 {/* Ko'proq tugmasi faqat yetarli element bo'lmasa ko'rinsin */}
                 {visibleCount < products.length && (
-                    <button onClick={handleShowMore} className="Koproq">Ko'proq</button>
+                    <button onClick={handleShowMore} className="Koproq">{t(`koproq`)}</button>
                 )}
 
                 {/* Kamroq tugmasi faqat visibleCount > 3 bo'lsa ko'rinsin */}
                 {visibleCount > 3 && (
-                    <button onClick={handleShowLess} className="Kamroq">Kamroq</button>
+                    <button onClick={handleShowLess} className="Kamroq">{t(`kamroq`)}</button>
                 )}
             </div>
         </div>
